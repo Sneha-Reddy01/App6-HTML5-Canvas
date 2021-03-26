@@ -89,11 +89,24 @@ console.log("This file last modified " + docMod); // generates message in javaSc
    //creates a function that will draw a rectangle within the canvas 
 </script>
 
-   <center><button onclick = "draw_a()">Draw rectangle</button><center> 
+   <center><button onclick = "draw_a()">Draw Rectangle</button><center> 
       <!-- codes for the rectangle drawing button -->
 
+<script>
+   function draw_name(){   //draws my name
+      var a_canvas = document.getElementId("a");
+      var a_context = a_canvas.getContext("2d"); 
+      a_context.fillText("Sneha Reddy", 50, 80); //this codes for the size of my name within the canvas
+   }
+         //creates a function that will draw my name within the canvas 
+</script>     
+
+   <center><button onclick = "draw_name()">Draw Name</button><center> 
+      <!-- codes for the name drawing button -->
 
 
+
+    
 <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
