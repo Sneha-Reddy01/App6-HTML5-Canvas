@@ -58,8 +58,7 @@ function draw_image() {   //draws or inserts an image
    var a_canvas = document.getElementById("a");
    var a_context = a_canvas.getContext("2d"); 
    var img = document.getElementById("Sun") //codes for the name of the image
-   context.draw_image(img, 100, 100, 100, 100); //this codes for the size of the image within the canvas
-   img id= "Sun" src="sun.jpg" alt= "Sunshine" width= "0" height= "0"
+   a_context.draw_image(img, 100, 100, 100, 100); //this codes for the size of the image within the canvas
 }
    //creates a function that will draw or insert an image within the canvas 
 
@@ -71,7 +70,6 @@ function clear_canvas() {   //clears the canvas
    //creates a function that will clear the canvas 
 
 </script>
-
 
 
 
@@ -124,10 +122,9 @@ function clear_canvas() {   //clears the canvas
    <center><button onclick = "clear_canvas();">Clear Canvas</button><center> 
       <!-- codes for the button that will clear the canvas -->
 
+   <img id= "Sun" src="sun.png" alt= "Sunshine" width= "50" height= "50">
 
 
-
-      
   
 
 
