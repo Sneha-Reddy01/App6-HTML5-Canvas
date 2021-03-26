@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-To practice and learn how to capture an image and display it onto my canvas.
+To practice and learn how to capture various images and display them onto my canvas through buttons.
  
 Known Issues:
 There are no known issues, but I have to create a canvas with a border surrounding it that fits on a phone screen, and then make a total of four buttons. The first button will draw a rectangle on my canvas, the second button will put my name on the canvas, and the third button will load an image onto the canvas, and the final button will clear the canvas page.
@@ -65,6 +65,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <!--
    this code creates style for my app 6
 -->
+
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
@@ -74,16 +75,28 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 -->
 
 <div id="content" class="w3-container">
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-   <canvas id="a" width="auto" height="auto" style="border : 1px solid #000000;">
-   </canvas> 
+	<center><canvas id="a" width="275" height="175" style="border : 1px solid #000000;"></canvas><center>
 <!--
-   this code adds a canvas sheet with a border
+   this code adds a canvas sheet with a border and codes for the size of the canvas
 -->
+
+<script>
+   function draw_a(){   //creates rectangle
+      var a_canvas = document.getElementId("a");
+      var a_context = a_canvas.getContext("2d"); 
+      a_context.fillRect(15, 15, 30, 50); //this codes for the size of the rectangle within the canvas
+   }
+   //creates a function that will draw a rectangle within the canvas 
+</script>
+
+   <center><button onclick = "draw_a()">Draw rectangle</button><center> 
+      <!-- codes for the rectangle drawing button -->
+
+
+
+<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
