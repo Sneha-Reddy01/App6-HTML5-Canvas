@@ -108,7 +108,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
    function draw_image() {   //draws or inserts an image
       var a_canvas = document.getElementId("a");
       var a_context = a_canvas.getContext("2d"); 
-      var img = document.getElementById("") //codes for the name of the image
+      var img = document.getElementById("Sun") //codes for the name of the image
       context.drawImage(img, 100, 100, 100, 100); //this codes for the size of the image within the canvas
    }
          //creates a function that will draw or insert an image within the canvas 
@@ -117,6 +117,20 @@ console.log("This file last modified " + docMod); // generates message in javaSc
    <center><button onclick = "draw_image();">Draw Image</button><center> 
       <!-- codes for the image drawing/inserting button -->
     
+<script>
+   function clear_canvas() {   //clears the canvas
+      var a_canvas = document.getElementId("a");
+      var a_context = a_canvas.getContext("2d"); 
+      a_context.clearRect(1, 1, 100, 100); //this codes for the clearing of the canvas
+   }
+         //creates a function that will clear the canvas 
+</script>     
+      
+   <center><button onclick = "clear_canvas();">Clear Canvas</button><center> 
+      <!-- codes for the button that will clear the canvas -->
+
+      <img id= "Sun" src="sun.jpg" alt= "Sunshine" width= "0" height= "0"
+
 <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
