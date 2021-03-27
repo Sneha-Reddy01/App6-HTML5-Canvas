@@ -1,79 +1,73 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
- 
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
- 
- 
 Authors in chronological order of contribution:
 Tim Riedel
 Author 2
- 
 Further Information:
 http://cns.utexas.edu/fri
- 
 Research Educator:
 Timothy Riedel
 triedel@utexas.edu
- 
 Brief Description of Goal of Code:
 To practice and learn how to capture various images and display them onto my canvas through buttons.
- 
 Known Issues:
 There are no known issues, but I have to create a canvas with a border surrounding it that fits on a phone screen, and then make a total of four buttons. The first button will draw a rectangle on my canvas, the second button will put my name on the canvas, and the third button will load an image onto the canvas, and the final button will clear the canvas page.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-
-   <head> 
-      <title>App6---HTML5-Canvas</title>  
+   <head>
+      <title>App6---HTML5-Canvas</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
-   
-
+   </head>
+  
+ 
 <script>
-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp.
+var sun1 = new Image();
+   sun1.addEventListener('load', eventSunLoad, false); //adds image to sun1 file
+   sun1.src = "sun.png";
+  
 function draw_a() {   //creates rectangle
    var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d"); 
-   a_context.fillRect(15, 15, 30, 50); //this codes for the size of the rectangle within the canvas
+   var a_context = a_canvas.getContext("2d");
+  a_context.fillRect(15, 15, 30, 50); //this codes for the size of the rectangle within the canvas
 }
-   //creates a function that will draw a rectangle within the canvas 
-
+   //creates a function that will draw a rectangle within the canvas
 function draw_name() {   //draws my name
    var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d"); 
+   var a_context = a_canvas.getContext("2d");
    a_context.fillText("Sneha Reddy", 50, 80); //this codes for the size of my name within the canvas
 }
-   //creates a function that will draw my name within the canvas 
-
-function draw_image() {   //draws or inserts an image
+   //creates a function that will draw my name within the canvas
+function draw_image(){
    var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d"); 
-   var img = document.getElementById("Sun") //codes for the name of the image
-   a_context.draw_image(img, 100, 100, 100, 100); //this codes for the size of the image within the canvas
+   var a_context = a_canvas.getContext("2d");
+   a_context.drawImage(sun1, 80,80,100,100); //function that draws image 
 }
-   //creates a function that will draw or insert an image within the canvas 
-
+ 
+function eventSunLoad(){
+               drawScreen();
+} // creates a function that specifies the image to the canvas
+ 
+function drawScreen(){
+               context.drawImage(sun1,80,80,100,100); //dimensions of the image
+}
 function clear_canvas() {   //clears the canvas
    var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d"); 
+   var a_context = a_canvas.getContext("2d");
    a_context.clearRect(1, 1, 200, 200); //this codes for the clearing of the canvas
 }
-   //creates a function that will clear the canvas 
-
+   //creates a function that will clear the canvas
 </script>
-
-
-
-<style>	
+ 
+<style>
 .body {
      margin: 0em;
 }
@@ -95,46 +89,40 @@ function clear_canvas() {   //clears the canvas
 <!--
    this code creates style for my app 6
 -->
-
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+   <h1>App6---HTML5-Canvas</h1>
 </div>
 <!--
    this code is for the header of the page
 -->
-
 <div id="content" class="w3-container">
-	<center><canvas id="a" width="275" height="175" style="border : 1px solid #000000;"></canvas><center>
+   <center><canvas id="a" width="275" height="175" style="border : 1px solid #000000;"></canvas><center>
 <!--
    this code adds a canvas sheet with a border and codes for the size of the canvas
 -->
-
-   <center><button onclick = "draw_a();">Draw Rectangle</button><center> 
+   <center><button onclick = "draw_a();">Draw Rectangle</button><center>
       <!-- codes for the rectangle drawing button -->
-
-   <center><button onclick = "draw_name();">Draw Name</button><center> 
+   <center><button onclick = "draw_name();">Draw Name</button><center>
       <!-- codes for the name drawing button -->
-
-   <center><button onclick = "draw_image();">Draw Image</button><center> 
+   <center><button onclick = "draw_image();">Draw Image</button><center>
       <!-- codes for the image drawing/inserting button -->
-    
-   <center><button onclick = "clear_canvas();">Clear Canvas</button><center> 
-      <!-- codes for the button that will clear the canvas -->
-
-   <img id= "Sun" src="sun.png" alt= "Sunshine" width= "50" height= "50">
-
-
   
-
-
-<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>	
+   <center><button onclick = "clear_canvas();">Clear Canvas</button><center>
+      <!-- codes for the button that will clear the canvas -->
+  
+      
+ 
+ 
+ 
+<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at     Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code          does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> 
 <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+   <p>DIY!</p>
 </footer>
 <!--
    this code creates a footer at the bottom of the page that says DIY
 -->
 </body>
 </html>
+ 
