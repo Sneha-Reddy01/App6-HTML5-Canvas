@@ -37,7 +37,7 @@ var sun1 = new Image();
 function draw_a() {   //creates rectangle
    var a_canvas = document.getElementById("a");
    var a_context = a_canvas.getContext("2d");
-  a_context.fillRect(15, 15, 30, 50); //this codes for the size of the rectangle within the canvas
+   a_context.fillRect(15, 15, 30, 50); //this codes for the size of the rectangle within the canvas
 }
    //creates a function that will draw a rectangle within the canvas
 function draw_name() {   //draws my name
@@ -53,11 +53,11 @@ function draw_image(){
 }
  
 function eventSunLoad(){
-               drawScreen();
+   drawScreen();
 } // creates a function that specifies the image to the canvas
  
 function drawScreen(){
-               context.drawImage(sun1,80,80,100,100); //dimensions of the image
+   context.drawImage(sun1,80,80,100,100); //dimensions of the image
 }
 function clear_canvas() {   //clears the canvas
    var a_canvas = document.getElementById("a");
@@ -103,11 +103,13 @@ function clear_canvas() {   //clears the canvas
 -->
    <center><button onclick = "draw_a();">Draw Rectangle</button><center>
       <!-- codes for the rectangle drawing button -->
+      
    <center><button onclick = "draw_name();">Draw Name</button><center>
       <!-- codes for the name drawing button -->
+      
    <center><button onclick = "draw_image();">Draw Image</button><center>
       <!-- codes for the image drawing/inserting button -->
-  
+      
    <center><button onclick = "clear_canvas();">Clear Canvas</button><center>
       <!-- codes for the button that will clear the canvas -->
   
